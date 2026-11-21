@@ -28,6 +28,5 @@ A simple to-do list web app where you can add tasks, mark them as done, delete t
 
 _Fill this in after you study the code: for example, how the DOM works, how events work, and how `localStorage` saves data._
 
-## Note
 
-I built this project with help from Claude, an AI assistant, and then studied and modified the code myself to understand how it works.
+
