@@ -2,7 +2,7 @@
 
 A simple to-do list web app where you can add tasks, mark them as done, delete them, and filter by All, Active, or Completed. Your tasks are saved in the browser, so they are still there when you reopen the page.
 
-**Live demo:** _add your GitHub Pages link here_
+**Live demo:** https://jansi-rani07.github.io/FOCUS-LIST/
 
 ## Features
 
@@ -26,7 +26,9 @@ A simple to-do list web app where you can add tasks, mark them as done, delete t
 
 ## What I learned
 
-_Fill this in after you study the code: for example, how the DOM works, how events work, and how `localStorage` saves data._
+_Fill this in after you study the code: for example, how the DOM works, how events work, and how `localStorage` saves data
+
+
 
 
 
