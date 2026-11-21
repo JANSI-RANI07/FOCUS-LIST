@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus List - To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Focus List</h1>
+    <p class="subtitle">Write down what matters today.</p>
+
+    <!-- Form: the user types a task and presses "Add task" -->
+    <form id="task-form">
+      <label for="task-input" class="visually-hidden">New task</label>
+      <input id="task-input" type="text" placeholder="What do you need to do?" maxlength="100" autocomplete="off" required>
+      <button type="submit" class="add-btn">Add task</button>
+    </form>
+
+    <!-- Filter buttons: show all, only active, or only completed tasks -->
+    <div class="filters" role="group" aria-label="Filter tasks">
+      <button type="button" data-filter="all" class="active">All</button>
+      <button type="button" data-filter="active">Active</button>
+      <button type="button" data-filter="done">Completed</button>
+    </div>
+
+    <!-- JavaScript fills this list with the tasks -->
+    <ul id="task-list"></ul>
+    <p id="empty-message">No tasks here yet. Add your first one above.</p>
+
+    <footer>
+      <span id="count"></span>
+      <button type="button" id="clear-done" class="link-btn">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

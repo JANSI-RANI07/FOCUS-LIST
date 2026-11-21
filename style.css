@@ -1,0 +1,128 @@
+/* ---------- Colors and basic settings (change these to restyle the app) ---------- */
+:root {
+  --ink: #1e2a3a;       /* main text */
+  --muted: #6b7686;     /* secondary text */
+  --paper: #f4f6f9;     /* page background */
+  --card: #ffffff;      /* app background */
+  --line: #dde2ea;      /* borders */
+  --accent: #0f766e;    /* buttons and highlights */
+  --danger: #b42318;    /* delete button */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* ---------- The app card ---------- */
+.app {
+  width: 100%;
+  max-width: 34rem;
+  height: fit-content;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+h1 { margin: 0; font-size: 2rem; letter-spacing: -0.02em; }
+.subtitle { margin: 0.25rem 0 1.5rem; color: var(--muted); }
+
+/* ---------- Add-task form ---------- */
+#task-form { display: flex; gap: 0.5rem; }
+
+#task-input {
+  flex: 1;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+button { font: inherit; cursor: pointer; }
+
+.add-btn {
+  padding: 0.65rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Visible outline when using the keyboard (accessibility) */
+button:focus-visible, input:focus-visible {
+  outline: 3px solid #5eead4;
+  outline-offset: 2px;
+}
+
+/* ---------- Filters ---------- */
+.filters { display: flex; gap: 0.5rem; margin: 1.25rem 0 0.75rem; }
+
+.filters button {
+  padding: 0.35rem 0.8rem;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.filters button.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+/* ---------- Task list ---------- */
+#task-list { list-style: none; margin: 0; padding: 0; }
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.task input[type="checkbox"] { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); }
+.task span { flex: 1; overflow-wrap: anywhere; }
+.task.done span { text-decoration: line-through; color: var(--muted); }
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  padding: 0.25rem 0.5rem;
+}
+
+#empty-message { color: var(--muted); text-align: center; padding: 1.5rem 0; }
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.link-btn { background: none; border: none; color: var(--accent); text-decoration: underline; }
+
+/* Hides text visually but keeps it for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
